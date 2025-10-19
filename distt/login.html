@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IRCTC Register/Login</title>
+     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+<div>
+    <nav class="w-full h-28 flex justify-between bg-white shadow-md px-4 items-center ">
+      <div><img class="w-20 h-20" src="images/imgi_1_secondry-logo.png" alt="logo"></div>
+
+
+      <div class="flex flex-col items-center">
+
+          <div class="flex justify-center mb-1.5 ">
+           <ul class="flex space-x-6 text-1xl font-medium text-gray-700 flex-wrap">
+           <li><a class="px-2 py-1.5 bg-[#233e78] text-white font-semibold  " href="#" >LOGIN</a></li>
+           <li><a href="#" >REGISTER</a></li>
+           <li><a href="#" >AGENT LOGIN</a></li>
+           <li><a href="#" >CONTACT US</a></li>
+           <li><a href="#" >HELP & SUPPORT</a></li>
+           <li><a class="text-[#ff0000] font-semibold" href="#" >DAILY DEALS</a></li>
+           <li><a class="px-2 py-1.5 bg-[#dedede] text-black font-semibold " href="#" > ALERTS</a></li>
+           </ul>
+           <div id="datetime" class="text-sm font-bold px-3"></div>
+           
+         </div>
+
+
+       <div class="flex justify-center mt-1.5">
+       <ul class="flex space-x-6 text-1xl font-medium text-gray-700 flex-wrap mt-2">
+        <li><i class="fa-solid fa-house"></i></li>
+        <li><a class="px-2 py-1.5 bg-[#233e78] text-white font-semibold  " href="#" >IRCTC EXCLUSIVE</a></li>
+        <li><a class="text-[#fc782b] font-semibold" href="#" >TRAIN</a></li>
+        <li><a href="#" >LOYALTY</a></li>
+        <li><a href="#" >IRCTC eWallet</a></li>
+        <li><a href="#" >BUSES</a></li>
+        <li><a href="#" >FLIGHTS</a></li>
+        <li><a href="#" >HOLIDAYS</a></li>
+        <li><a href="#" >MEALS</a></li>
+        <li><a href="#" >MORE</a></li>
+       </ul>
+
+       </div>
+
+
+      </div>
+
+
+       <div class="w-16 h-20"><img src="images/imgi_2_logo.png" alt="logo"></div>
+    </nav>
+  </div>
+
+  <!-- Page Container -->
+  <div class="flex justify-center py-10">
+    <div class="bg-white shadow-lg rounded-lg w-full max-w-2xl p-8">
+
+      <!-- Tabs: Login / Register -->
+      <div class="flex justify-center mb-6 border-b">
+        <button id="loginTab" class="w-1/2 py-2 text-center text-gray-500 font-semibold border-b-4 border-transparent hover:text-blue-600">Login</button>
+        <button id="registerTab" class="w-1/2 py-2 text-center text-blue-700 font-semibold border-b-4 border-blue-700">Register</button>
+      </div>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">Create Your IRCTC Account</h2>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Username</label>
+          <input type="text" placeholder="Enter username" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Full Name</label>
+          <input type="text" placeholder="Enter full name" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Password</label>
+          <input type="password" placeholder="Enter password" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Confirm Password</label>
+          <input type="password" placeholder="Confirm password" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Email</label>
+          <input type="email" placeholder="Enter email" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Mobile</label>
+          <input type="tel" placeholder="Enter mobile number" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" id="terms" class="accent-blue-600">
+          <label for="terms" class="text-sm text-gray-600">I agree to the <a href="#" class="text-blue-600">terms & conditions</a>.</label>
+        </div>
+
+        <button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700">Register</button>
+      </form>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="hidden space-y-4">
+        <h2 class="text-xl font-semibold text-gray-800">Login to Your IRCTC Account</h2>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Username</label>
+          <input type="text" placeholder="Enter username" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-600 mb-1">Password</label>
+          <input type="password" placeholder="Enter password" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+
+        <button class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700">Login</button>
+      </form>
+
+    </div>
+  </div>
+
+    <footer class="bg-[#2b205c] text-white py-8 mt-20">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Column 1 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">About Us</h2>
+      <p class="text-gray-400 text-sm">
+        IRCTC Clone - A demo travel booking platform for learning purposes.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">Services</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-4">
+    © 2025 IRCTC Clone. All rights reserved.
+  </div>
+</footer>
+
+<script> const loginTab = document.getElementById("loginTab");
+  const registerTab = document.getElementById("registerTab");
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+
+  
+  loginTab.addEventListener("click", () => {
+    loginForm.classList.remove("hidden");
+    registerForm.classList.add("hidden");
+
+    
+    loginTab.classList.add("text-blue-700", "border-blue-700");
+    registerTab.classList.remove("text-blue-700", "border-blue-700");
+    registerTab.classList.add("text-gray-500");
+  });
+
+  
+  registerTab.addEventListener("click", () => {
+    registerForm.classList.remove("hidden");
+    loginForm.classList.add("hidden");
+
+    
+    registerTab.classList.add("text-blue-700", "border-blue-700");
+    loginTab.classList.remove("text-blue-700", "border-blue-700");
+    loginTab.classList.add("text-gray-500");
+  });
+</script>
+
+
+
+  <script src="login.js"></script>
+
+</body>
+</html>

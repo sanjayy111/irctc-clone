@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Train Results | IRCTC </title>
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen font-sans">
+
+
+  <div>
+    <nav class="w-full h-28 flex justify-between bg-white shadow-md px-4 items-center ">
+      <div><img class="w-20 h-20" src="images/imgi_1_secondry-logo.png" alt="logo"></div>
+
+
+      <div class="flex flex-col items-center">
+
+          <div class="flex justify-center mb-1.5 ">
+           <ul class="flex space-x-6 text-1xl font-medium text-gray-700 flex-wrap">
+           <li><a class="px-2 py-1.5 bg-[#233e78] text-white font-semibold  " href="#" >LOGIN</a></li>
+           <li><a href="#" >REGISTER</a></li>
+           <li><a href="#" >AGENT LOGIN</a></li>
+           <li><a href="#" >CONTACT US</a></li>
+           <li><a href="#" >HELP & SUPPORT</a></li>
+           <li><a class="text-[#ff0000] font-semibold" href="#" >DAILY DEALS</a></li>
+           <li><a class="px-2 py-1.5 bg-[#dedede] text-black font-semibold " href="#" > ALERTS</a></li>
+           </ul>
+           <div id="datetime" class="text-sm font-bold px-3"></div>
+           
+         </div>
+
+
+       <div class="flex justify-center mt-1.5">
+       <ul class="flex space-x-6 text-1xl font-medium text-gray-700 flex-wrap mt-2">
+        <li><i class="fa-solid fa-house"></i></li>
+        <li><a class="px-2 py-1.5 bg-[#233e78] text-white font-semibold  " href="#" >IRCTC EXCLUSIVE</a></li>
+        <li><a class="text-[#fc782b] font-semibold" href="#" >TRAIN</a></li>
+        <li><a href="#" >LOYALTY</a></li>
+        <li><a href="#" >IRCTC eWallet</a></li>
+        <li><a href="#" >BUSES</a></li>
+        <li><a href="#" >FLIGHTS</a></li>
+        <li><a href="#" >HOLIDAYS</a></li>
+        <li><a href="#" >MEALS</a></li>
+        <li><a href="#" >MORE</a></li>
+       </ul>
+
+       </div>
+
+
+      </div>
+
+
+       <div class="w-16 h-20"><img src="images/imgi_2_logo.png" alt="logo"></div>
+    </nav>
+  </div>
+
+
+
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center mt-3">
+    <h1 class="text-xl font-bold text-blue-700">IRCTC </h1>
+    <a href="index.html" class="text-sm text-orange-600 hover:underline">← Modify Search</a>
+  </header>
+
+  <!-- Results Container -->
+  <main class="max-w-5xl mx-auto mt-6 p-4">
+    <h2 id="routeTitle" class="text-2xl font-bold text-gray-800 mb-4"></h2>
+    <div id="results" class="space-y-4"></div>
+  </main>
+
+   <footer class="bg-[#2b205c] text-white py-8 mt-20">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Column 1 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">About Us</h2>
+      <p class="text-gray-400 text-sm">
+        IRCTC Clone - A demo travel booking platform for learning purposes.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">Services</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-4">
+    © 2025 IRCTC Clone. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+<script>
+  // ---- Get search query params ----
+  const urlParams = new URLSearchParams(window.location.search);
+  const from = urlParams.get('from');
+  const to = urlParams.get('to');
+  const date = urlParams.get('date');
+  const classCode = urlParams.get('class') || 'SL';
+
+  // ---- Set route title ----
+  document.getElementById('routeTitle').textContent =
+    `Train Results: ${from.toUpperCase()} ➜ ${to.toUpperCase()} (${date})`;
+
+  // ✅ Fetch trains between stations from backend
+  async function fetchTrainsBetweenStations() {
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = `<p class="text-center text-blue-600 py-4">🔄 Fetching available trains...</p>`;
+
+    try {
+      const res = await fetch(`http://localhost:3000/betweenStations?from=${from}&to=${to}`);
+      const data = await res.json();
+
+      if (!data || data.length === 0) {
+        resultsDiv.innerHTML =
+          `<p class="text-center text-red-600 py-4">No trains found for this route.</p>`;
+        return;
+      }
+
+      // Clear results section
+      resultsDiv.innerHTML = "";
+
+      // Display all trains
+      data.forEach(train => displayTrain(train));
+    } catch (err) {
+      console.error(err);
+      resultsDiv.innerHTML =
+        `<p class="text-center text-red-600 py-4">⚠️ Error fetching train list.</p>`;
+    }
+  }
+
+  // ✅ Display each train card
+  function displayTrain(train) {
+    const container = document.getElementById("results");
+
+    const card = document.createElement("div");
+    card.className = "bg-white p-4 shadow rounded border mb-4 hover:shadow-lg transition";
+
+    card.innerHTML = `
+      <div class="flex justify-between items-center mb-3">
+        <div>
+          <h3 class="text-lg font-bold text-gray-800">${train.TrainName} (${train.TrainNo})</h3>
+          <p class="text-sm text-gray-600">From: ${train.From} ➜ To: ${train.To}</p>
+          <p class="text-sm text-gray-500">Departure: ${train.Departure} | Arrival: ${train.Arrival}</p>
+        </div>
+        <button class="px-3 py-1 bg-orange-500 text-white rounded hover:bg-orange-600">
+          Book Now
+        </button>
+      </div>
+    `;
+
+    container.appendChild(card);
+  }
+
+  // 🚀 Start fetching trains
+  fetchTrainsBetweenStations();
+</script>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div>
+    <nav class="w-full h-28 flex justify-between bg-white shadow-md px-4 items-center ">
+      <div><img class="w-20 h-20" src="images/imgi_1_secondry-logo.png" alt="logo"></div>
+
+
+      <div class="flex flex-col items-center">
+
+          <div class="flex justify-center mb-1.5 ">
+           <ul class="flex space-x-6 text-1xl font-medium text-gray-700 flex-wrap">
+           <li><a class="px-2 py-1.5 bg-[#233e78] text-white font-semibold  " href="login.html" >LOGIN</a></li>
+           <li><a href="login.html" >REGISTER</a></li>
+           <li><a href="#" >AGENT LOGIN</a></li>
+           <li><a href="#" >CONTACT US</a></li>
+           <li><a href="#" >HELP & SUPPORT</a></li>
+           <li><a class="text-[#ff0000] font-semibold" href="#" >DAILY DEALS</a></li>
+           <li><a class="px-2 py-1.5 bg-[#dedede] text-black font-semibold " href="#" > ALERTS</a></li>
+           </ul>
+           <div id="datetime" class="text-sm font-bold px-3"></div>
+           
+         </div>
+
+
+       <div class="flex justify-center mt-1.5">
+       <ul class="flex space-x-6 text-1xl font-medium text-gray-700 flex-wrap mt-2">
+        <li><i class="fa-solid fa-house"></i></li>
+        <li><a class="px-2 py-1.5 bg-[#233e78] text-white font-semibold  " href="#" >IRCTC EXCLUSIVE</a></li>
+        <li><a class="text-[#fc782b] font-semibold" href="#" >TRAIN</a></li>
+        <li><a href="#" >LOYALTY</a></li>
+        <li><a href="#" >IRCTC eWallet</a></li>
+        <li><a href="#" >BUSES</a></li>
+        <li><a href="#" >FLIGHTS</a></li>
+        <li><a href="#" >HOLIDAYS</a></li>
+        <li><a href="#" >MEALS</a></li>
+        <li><a href="#" >MORE</a></li>
+       </ul>
+
+       </div>
+
+
+      </div>
+
+
+       <div class="w-16 h-20"><img src="images/imgi_2_logo.png" alt="logo"></div>
+    </nav>
+  </div>
+
+
+  <div>
+
+    <div>
+   
+
+
+
+  <!-- Booking Section -->
+<section class="relative bg-cover bg-center h-[650px]" style="background-image: url('images/imgi_36_home_page_banner1.e6749c3d9698d1ac7608.jpg');">
+
+<div class="absolute right-1/6 top-1 text-[#233e78]">
+    <h1 class="text-5xl font-bold">INDIAN RAILWAYS</h1>
+    <p class="text-2xl m-2 px-9">Safety | Security | Punctuality</p>
+  </div>
+
+
+
+  <!-- Dark overlay -->
+  <div class="absolute inset-0  bg-opacity-40"></div>
+
+  <!-- Form Container -->
+  <div class="relative z-10 flex items-center justify-start h-full px-10 ">
+    <div class="bg-white bg-opacity-95 shadow-lg p-6 w-full max-w-2xl">
+
+
+      <h2 class="text-3xl font-bold text-blue-900 mb-4 text-center">BOOK TICKET</h2>
+      
+      <form id="searchForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- From -->
+        <input id="from" type="text" placeholder="From" 
+          class="border p-3 rounded w-full focus:outline-none focus:ring focus:ring-blue-400">
+
+        <!-- Date -->
+        <input id="date" type="date"
+          class="border p-3 rounded w-full focus:outline-none focus:ring focus:ring-blue-400">
+
+        <!-- To -->
+        <input id="to" type="text" placeholder="To" 
+          class="border p-3 rounded w-full focus:outline-none focus:ring focus:ring-blue-400">
+
+        <!-- All Classes Dropdown -->
+        <select id="class" class="border p-3 rounded w-full focus:outline-none focus:ring focus:ring-blue-400">
+          <option>All Classes</option>
+          <option>Sleeper (SL)</option>
+          <option>AC 3 Tier (3A)</option>
+          <option>AC 2 Tier (2A)</option>
+          <option>AC First Class (1A)</option>
+          <option>Chair Car (CC)</option>
+        </select>
+
+        <!-- Quota Dropdown -->
+        <select id="quota" class="border p-3 rounded w-full focus:outline-none focus:ring focus:ring-blue-400 md:col-span-2">
+          <option>GENERAL</option>
+          <option>Ladies</option>
+          <option>Senior Citizen</option>
+          <option>Tatkal</option>
+          <option>Premium Tatkal</option>
+        </select>
+
+        <!-- Options -->
+        <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-sm text-gray-700">
+          <label><input type="checkbox" class="mr-2"> Person With Disability Concession</label>
+          <label><input type="checkbox" class="mr-2"> Flexible With Date</label>
+          <label><input type="checkbox" class="mr-2"> Train with Available Berth</label>
+          <label><input type="checkbox" class="mr-2"> Railway Pass Concession</label>
+        </div>
+
+        <!-- Buttons -->
+        <div class="md:col-span-2 flex gap-4 mt-4">
+          <button id="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded">
+            Search
+          </button>
+          <button type="button" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-2 rounded">
+            Easy Booking on AskDISHA
+          </button>
+        </div>
+      </form>
+          <div class="bg-blue-100 border-t border-blue-400 text-blue-900 text-sm px-6 py-3 w-full max-w-4xl mt-4 rounded shadow">
+      <p>
+        <span class="font-semibold">Festival Round Trip Scheme:</span> User Guide and Terms & Conditions  
+      </p>
+      <p class="mt-1">
+        Customers can use enhanced interface for their IRCTC related queries!!  
+        <a href="https://enquiry.irctc.co.in" target="_blank" class="text-blue-700 underline">https://enquiry.irctc.co.in</a>
+      </p>
+      <p class="mt-1 text-red-600">
+        Customer Care Numbers : Dial 14646 (Within India) | +91-8046440799 / +91-8035734999 (Outside India)
+      </p>
+    </div>
+    </div>
+    
+  </div>
+</section>
+
+
+      
+    </div>
+
+
+
+
+  </div>
+
+  <h1 class="text-center font-bold text-4xl py-20">Have you not found the right one?<br>Find a service suitable for you here.</h1>
+
+
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 justify-items-center my-10">
+  
+  <div class="text-center">
+    <div class="icon flights mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">FLIGHTS</p>
+  </div>
+
+  
+  <div class="text-center">
+    <div class="icon hotels mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">HOTELS</p>
+  </div>
+
+  
+  <div class="text-center">
+    <div class="icon e-catering mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">RAIL DRISHTI</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon bus mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">E-CATERING</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon holiday mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">BUS</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon tourist-train mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">HOLIDAY PACKAGES</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon hill-railways mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">TOURIST TRAIN</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon charter-train mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">HILL RAILWAYS</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon gallery mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">CHARTER TRAIN</p>
+  </div>
+
+
+  <div class="text-center">
+    <div class="icon rail-drishti mx-auto"></div>
+    <p class="mt-2 text-sm font-semibold">GALLERY</p>
+  </div>
+
+  
+</div>
+
+<h1 class="text-center font-extrabold text-4xl mb-16 mt-16">HOLIDAYS</h1>
+
+
+<div class="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center max-w-6xl gap-8 mx-auto">
+  <div class="max-w-sm shadow-lg bg-white p-6">
+  <img class=" " src="images/imgi_10_exterior.jpg" alt="Card image" />
+  <h2 class="text-2xl font-semibold mb-2 mt-2">Maharaj's Express</h2>
+  <p class="text-gray-600 text-sm mb-4">
+    Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on a sojourn to the era of bygone stately splendour of princely states. Sylvan furnishings, elegant ambience and modern amenities are amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s Leading Luxury train” by World Travel Awards consecutively for last six years.
+  </p>
+  <button class="px-3 py-2 ">
+    
+    Read More
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+  <div class="max-w-sm shadow-lg bg-white p-6">
+  <img class=" " src="images/imgi_11_Thailand.jpg" alt="Card image" />
+  <h2 class="text-2xl font-semibold mb-2 mt-2 ">International Pacakges</h2>
+  <p class="text-gray-600 text-sm mb-4">
+      Best deals in International Holiday packages, handpicked by IRCTC, for Thailand, Dubai, Sri Lanka, Hong Kong, China, Macau, Bhutan, Nepal, U.K., Europe, USA, Australia etc. The packages are inclusive of sightseeing, meals, visa charges and overseas medical insurance to give you a hassle-free and memorable experience.
+  </p>
+  <button class="px-3 py-2 ">
+    
+    Read More
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+  <div class="max-w-sm shadow-lg bg-white p-6">
+  <img class=" " src="images/imgi_12_Kashmir.jpg" alt="Card image" />
+  <h2 class="text-2xl font-semibold mb-2 mt-2">Domestic Air Packages</h2>
+  <p class="text-gray-600 text-sm mb-4">
+    Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or Mata Vaishno Devi or the leisure traveller wanting to relish the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets of Ladakh, Wonders of Himalayas, Serene lakes or Picturesque Islands, IRCTC has it all. Discover India through IRCTC!
+  </p>
+  <button class="px-3 py-2 ">
+    
+    Read More
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+  <div class="max-w-sm shadow-lg bg-white p-6">
+  <img class=" " src="images/imgi_13_Bharat_Gaurav.jpg" alt="Card image" />
+  <h2 class="text-2xl font-semibold mb-2 mt-2">Bharat Gaurav Tourist Train</h2>
+  <p class="text-gray-600 text-sm mb-4">
+    IRCTC operates Bharat Gaurav Tourist Train having AC III-Tier accommodation on train specially designed to promote domestic tourism in India. This train runs on various theme based circuits covering pilgrimage and heritage destinations in its itinerary on a 5 days to 20 days trip and showcase India’s rich cultural heritage.
+  </p>
+  <button class="px-3 py-2 ">
+    
+    Read More
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+  <div class="max-w-sm shadow-lg bg-white p-6">
+  <img class=" " src="images/imgi_14_Manali.jpg" alt="Card image" />
+  <h2 class="text-2xl font-semibold mb-2 mt-2">Rail tour packages</h2>
+  <p class="text-gray-600 text-sm mb-4">
+    IRCTC offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday packages/ Land packages to these destinations are also available.
+  </p>
+  <button class="px-3 py-2 ">
+    
+    Read More
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+
+<div>
+  <img  class="ml-10"  src="images/imgi_30_HOME_BOTTOM_RIGHT.jpg" alt="banner">
+</div>
+
+</div>
+
+
+</div>
+
+
+  </div>
+
+  <footer class="bg-[#2b205c] text-white py-8 mt-20">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    
+    <!-- Column 1 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">About Us</h2>
+      <p class="text-gray-400 text-sm">
+        IRCTC Clone - A demo travel booking platform for learning purposes.
+      </p>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">Services</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="text-center text-gray-500 text-sm mt-8 border-t border-gray-700 pt-4">
+    © 2025 IRCTC Clone. All rights reserved.
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+
+</body>
+
+
+
+</html>
