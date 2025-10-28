@@ -11,7 +11,7 @@ A modern clone of the **IRCTC website** that allows users to search for trains b
 ---
 
 ## 📝 Description
-The **IRCTC Website Clone** is a full-stack web application designed to simulate the Indian Railway Catering and Tourism Corporation website.  
+The **IRCTC Website Clone** is a full-stack web application designed to simulate the Indian Railway Train booking and Tourism Corporation website.  
 Users can:
 - Search trains between two stations  
 - Check PNR status  
@@ -65,3 +65,11 @@ npm install
 
 # 4️⃣ Start the server
 npm start
+```
+
+---
+
+## 📬 Contact
+
+📧 **Email:** [sanjaysahu37199@gmail.com](mailto:sanjaysahu37199@gmail.com)  
+💻 **GitHub:** [https://github.com/sanjayy111](https://github.com/sanjayy111)
