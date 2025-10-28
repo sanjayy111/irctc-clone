@@ -1,3 +1,4 @@
+
 # 🚆 IRCTC Website Clone
 
 A modern clone of the **IRCTC website** that allows users to search for trains between two stations, check **PNR status**, and register or log in to manage their details. The project replicates key functionalities of the Indian Railways booking system using a **Node.js + MongoDB** backend and a **Tailwind CSS** front-end.
@@ -39,16 +40,19 @@ Users can:
 
 | Screenshot | Description |
 |-------------|-------------|
-| ![Screenshot 1](./screenshots/screenshot1.png) | Home Page |
-| ![Screenshot 2](./screenshots/screenshot2.png) | Train Search |
-| ![Screenshot 3](./screenshots/screenshot3.png) | PNR Status |
-| ![Screenshot 4](./screenshots/screenshot4.png) | Login/Register |
+| ![Screenshot 1](./distt/screenshots/Screenshot%20(3).png) | Home Page 1 |
+| ![Screenshot 1](./distt/screenshots/Screenshot%20(4).png) | Home Page 2 |
+| ![Screenshot 1](./distt/screenshots/Screenshot%20(5).png) | Home Page 3 |
+| ![Screenshot 1](./distt/screenshots/Screenshot%20(6).png) | Home Page 4 |
+| ![Screenshot 2](./distt/screenshots/Screenshot%20(9).png) | Train Search |
+| ![Screenshot 4](./distt/screenshots/Screenshot%20(8).png) | Login |
+| ![Screenshot 1](./distt/screenshots/Screenshot%20(7).png) | Register |
 
 ---
 
 ## ⚙️ Installation
 
-To run this project locally: 
+To run this project locally:
 
 ```bash
 # 1️⃣ Clone the repository
@@ -62,4 +66,3 @@ npm install
 
 # 4️⃣ Start the server
 npm start
-
