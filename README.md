@@ -36,7 +36,6 @@ Users can:
 ---
 
 ## 🖼️ Screenshots
-> 📸 *(Add screenshots in the placeholders below once ready)*
 
 | Screenshot | Description |
 |-------------|-------------|
