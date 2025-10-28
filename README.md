@@ -72,4 +72,4 @@ npm start
 ## 📬 Contact
 
 📧 **Email:** [sanjaysahu37199@gmail.com](mailto:sanjaysahu37199@gmail.com)  
-💻 **GitHub:** [https://github.com/sanjayy111](https://github.com/sanjayy111)
+💻 **linkedin:** [www.linkedin.com/in/sanjay-sahu-2557b82a4](www.linkedin.com/in/sanjay-sahu-2557b82a4)
