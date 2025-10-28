@@ -66,6 +66,7 @@ document.getElementById("searchForm").addEventListener("submit", (e) => {
   const date = dateInput.replaceAll("-", ""); // yyyyMMdd
 
   // Update info section
+  const infoSection = document.getElementById("infoSection");
   document.getElementById("infoSection").classList.remove("hidden");
   document.getElementById("fromCity").textContent = from;
   document.getElementById("toCity").textContent = to;
