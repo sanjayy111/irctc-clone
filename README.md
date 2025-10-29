@@ -1,7 +1,7 @@
 
 # 🚆 IRCTC Website Clone
 
-A modern clone of the **IRCTC website** that allows users to search for trains between two stations, check **PNR status**, and register or log in to manage their details. The project replicates key functionalities of the Indian Railways booking system using a **Node.js + MongoDB** backend and a **Tailwind CSS** front-end.
+A modern clone of the **IRCTC website** that allows users to search for trains between two stations, check **PNR status**, and register or log in to manage their details. The project replicates key functionalities of the Indian Railways train booking system using a **Node.js + MongoDB** backend and a **Tailwind CSS** front-end.
 
 ---
 
