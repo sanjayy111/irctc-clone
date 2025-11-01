@@ -6,14 +6,9 @@ const form = document.getElementById("searchForm");
 if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    // your existing code...
+    
   });
 }
-
-
-
-
-
 
 
 
@@ -41,19 +36,11 @@ function updateDateTime() {
   document.getElementById('datetime').textContent = `${date} [ ${time}` + ']';
 }
 
-// run once immediately and then every second
+
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
 
-
-
-
-
-
-
-
-// 🧭 Handle search form
 document.getElementById("searchForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const from = document.getElementById("from").value.toUpperCase().trim();
@@ -63,9 +50,9 @@ document.getElementById("searchForm").addEventListener("submit", (e) => {
 
   
 
-  const date = dateInput.replaceAll("-", ""); // yyyyMMdd
+  const date = dateInput.replaceAll("-", ""); 
 
-  // Update info section
+  
   const infoSection = document.getElementById("infoSection");
   document.getElementById("infoSection").classList.remove("hidden");
   document.getElementById("fromCity").textContent = from;
@@ -75,7 +62,6 @@ document.getElementById("searchForm").addEventListener("submit", (e) => {
   fetchTrains(from, to);
 });
 
-// 🚉 Fetch train data from API
 
 async function fetchTrains(from, to) {
   const resultsDiv = document.getElementById("results");
@@ -127,12 +113,6 @@ async function fetchTrains(from, to) {
 
 
 
-
-
-
-
-
-// Helper functions
 function calculateDuration(start, end) {
   const [sh, sm] = start.split(":").map(Number);
   const [eh, em] = end.split(":").map(Number);
