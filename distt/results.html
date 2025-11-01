@@ -11,7 +11,7 @@
 <body class="bg-gray-100 min-h-screen font-sans">
 
 
-  <!-- Navbar -->
+
   <div>
     <nav class="w-full h-28 flex justify-between bg-white shadow-md px-4 items-center ">
       <div><img class="w-20 h-20" src="images/imgi_1_secondry-logo.png" alt="logo"></div>
@@ -52,19 +52,19 @@
   </div>
 
 
-  <!-- Header -->
+  
   <header class="bg-white shadow p-4 flex justify-between items-center mt-3">
     <h1 class="text-xl font-bold text-blue-700">IRCTC</h1>
     <a href="index.html" class="text-sm text-orange-600 hover:underline">← Modify Search</a>
   </header>
 
-  <!-- Results Container -->
+  
   <main class="max-w-5xl mx-auto mt-6 p-4">
     <h2 id="routeTitle" class="text-2xl font-bold text-gray-800 mb-4"></h2>
     <div id="results" class="space-y-4"></div>
   </main>
 
-  <!-- Footer -->
+  
   <footer class="bg-[#2b205c] text-white py-8 mt-20">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
@@ -100,7 +100,7 @@
 
 
   <script>
-    // 🕒 Live Date and Time
+  
     function updateDateTime() {
       const now = new Date();
       document.getElementById("datetime").textContent = now.toLocaleString();
@@ -109,19 +109,19 @@
     updateDateTime();
 
 
-    // ---- Get search query params ----
+    
     const urlParams = new URLSearchParams(window.location.search);
     const from = urlParams.get('from') || 'Delhi';
     const to = urlParams.get('to') || 'Mumbai';
     const date = urlParams.get('date') || '2025-10-28';
     const classCode = urlParams.get('class') || 'SL';
 
-    // ---- Set route title ----
+  
     document.getElementById('routeTitle').textContent =
       `Train Results: ${from.toUpperCase()} ➜ ${to.toUpperCase()} (${date})`;
 
 
-    // 🚆 Demo Train Data (Instead of backend fetch)
+  
     const demoTrains = [
       {
         TrainName: "Rajdhani Express",
@@ -165,7 +165,7 @@
       }
     ];
 
-    // ✅ Display each train card
+    
     function displayTrain(train) {
       const container = document.getElementById("results");
 
@@ -189,7 +189,7 @@
       container.appendChild(card);
     }
 
-    // 🚀 Load demo trains
+  
     demoTrains.forEach(train => displayTrain(train));
   </script>
 
