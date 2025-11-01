@@ -6,7 +6,7 @@
     const date = document.getElementById('date').value;
     const classCode = document.getElementById('class').value;
 
-    // redirect to results page with query params
+  
     window.location.href = `results.html?from=${from}&to=${to}&date=${date}&class=${classCode}`;
   });
 
