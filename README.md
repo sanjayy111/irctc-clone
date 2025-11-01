@@ -5,10 +5,6 @@ A modern clone of the **IRCTC website** that allows users to search for trains b
 
 ---
 
-## 🌐 Live Demo
-> 🚀 [Add your live project link here once deployed]
-
----
 
 ## 📝 Description
 The **IRCTC Website Clone** is a full-stack web application designed to simulate the Indian Railway Train booking and Tourism Corporation website.  
